@@ -1,5 +1,4 @@
-from itertools import permutations as perm;
-import math
+import math;
 
 def isPrime(num):
     if(num==2 or num==3):
@@ -26,11 +25,9 @@ counter = 0;
 for i in range(2,1000000):
     if (isPrime(i)):
         isCircularPrime = True;
-        print i,counter;
         listOfDigit = numToList(i);
         for j in range(len(listOfDigit)):
             rotatingList = (listOfDigit[j:] + listOfDigit[:j]);
-            print rotatingList;
             if(not isPrime(listToNum(rotatingList))):
                 isCircularPrime = False;
         if(isCircularPrime):
